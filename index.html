@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DipeshITsolution | Home</title>
+  <link rel="stylesheet" href="style.css" />
+ 
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-81BDT5RKZX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-81BDT5RKZX');
+</script>
+ 
+</head>
+
+<body>
+ <header>
+  <div class="navbar" data-aos="fade-down">
+    <h1 class="logo">DipeshITsolution</h1>
+    
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Nav Links -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+        <a href="service.html">Service</a>
+      <a href="contact.html">Contact</a>
+    
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section id="gallery" data-aos="zoom-in">
+      <h2>Gallery</h2>
+      <div class="gallery">
+          <img src="image/chat web.png" alt="Gallery Image 1" />
+          <img src="image/chat code.png" alt="Gallery Image 2" />
+        <img src="image/web.webp" alt="Gallery Image 3" />
+        
+        
+      </div>
+    </section>
+
+    <section class="agency-section" data-aos="fade-up">
+      <h2>Why Choose DipeshITsolution?</h2>
+      <p>We provide smart, secure, and scalable IT solutions for your business success. Our focus is on delivering quality, performance, and innovation.</p>
+      <img src="image/password.webp" class="project-img" alt="Agency Work" />
+      <br />
+      <button class="services-button" onclick="openModal('servicesModal')">Explore Our Services</button>
+    </section>
+
+    <!-- Modal -->
+    <div id="servicesModal" class="modal">
+      <div class="modal-content" data-aos="fade-up">
+        <span class="close" onclick="closeModal('servicesModal')">&times;</span>
+        <h3>Our Core Services</h3>
+        <ul>
+          <li><strong>Web Development:</strong> Responsive and custom-designed websites using the latest tech.</li>
+          <li><strong>UI/UX Design:</strong> Pixel-perfect interfaces for the best user experience.</li>
+          <li><strong>IT Consulting:</strong> Strategic IT planning to grow your business faster.</li>
+        </ul>
+        <img src="image/chat code.png" class="project-img" alt="Our Services"/>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" data-aos="fade-up">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>DipeshITsolution</h2>
+        <p>Delivering smart and secure IT solutions for modern businesses.</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>📞 +91 8306073071</p>
+        <p>📧 <a href="mailto:dipeshitsolution1@gmail.com">dipeshitsolution1@gmail.com</a></p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://www.linkedin.com/in/dipesh-yadav-321a62329/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Dipesh-1no" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/dipeshitsolution/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 DipeshITsolution. All rights reserved.</p>
+    </div>
+  </footer>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+ <script>
+  AOS.init();
+
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(modal => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+
+  // Hamburger toggle function
+  function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+  }
+
+  // Optional: Navbar hide on scroll
+  let lastScrollTop = 0;
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll down
+      navbar.classList.add("navbar-hidden");
+    } else {
+      // Scroll up
+      navbar.classList.remove("navbar-hidden");
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative
+  });
+</script>
+    </body>
+</html>
