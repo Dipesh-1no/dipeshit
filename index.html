@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DipeshITsolution | Home</title>
   <link rel="stylesheet" href="style.css" />
- 
+  <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
@@ -22,29 +22,18 @@
 </head>
 
 <body>
- <header>
-  <div class="navbar" data-aos="fade-down">
-    <h1 class="logo">DipeshITsolution</h1>
-    
-    <!-- Hamburger Icon -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-
-    <!-- Nav Links -->
-    <div class="nav-links">
+ <nav id="navbar">
+    <div class="logo">DipeshITsolution</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="menu" id="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
-        <a href="service.html">Service</a>
+      <a href="service.html">Services</a>
       <a href="contact.html">Contact</a>
-    
-    </div>
-  </div>
-</header>
 
+    </div>
+  </nav>
 
   <main>
     <section id="gallery" data-aos="zoom-in">
@@ -149,5 +138,6 @@
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative
   });
 </script>
+<script src="index.js"></script>
     </body>
 </html>

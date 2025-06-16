@@ -5,80 +5,6 @@
       background-color: #f9f9f9;
     }
 /* Navbar Base */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  background-color: #1a1a2e; /* keep it neutral */
-  color: white;
-  z-index: 1000;
-   backdrop-filter: blur(px); /* Optional: adds a glass-like blur */
-  transition: top 0.3s ease-in-out, background 0.3s;
-
-  }
-
-/* Logo */
-.logo {
-font-size: 2.2rem;
-  font-weight: bold;
-  color: #00bcd4;
-}
-
-/* Nav Links (desktop) */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-weight: 500;
-  color: white;
-    font-size: 1.1rem;
-}
-
-/* Hamburger icon (3 lines) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: rgb(241, 241, 241);
-  transition: 0.3s;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #1a1a2e;
-    flex-direction: column;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    display: none; /* hidden by default */
-  }
-  .nav-links a {
-    color: white;
-  }
-  .nav-links.show {
-    display: flex;
-  }
-}
 
     .services-section {
       padding: 50px 20px;
@@ -90,12 +16,14 @@ font-size: 2.2rem;
       text-align: center;
       font-size: 2.5em;
       margin-bottom: 40px;
+          
     }
 
     .service-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
+  
     }
 
     .card {

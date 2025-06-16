@@ -1,22 +1,33 @@
-// Contact form submission handler
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contactForm");
-    const statusMsg = document.getElementById("statusMsg");
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+  const darkToggle = document.getElementById("darkToggle");
 
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
+  // Hamburger toggle
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
 
-            // Show sending status
-            statusMsg.textContent = "⏳ Sending your message...";
+  // Dark mode toggle
+  darkToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    darkToggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  });
 
-            // Simulate a delay (e.g., email being sent)
-            setTimeout(() => {
-                statusMsg.textContent = "✅ Message sent successfully! We'll get back to you via Dipeshitsolution@gmail.com.";
-                form.reset();
-            }, 2000);
-        });
+  // Scroll behavior
+  let lastScrollTop = 0;
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll down
+      navbar.classList.add("hidden");
+    } else {
+      // Scroll up
+      navbar.classList.remove("hidden");
     }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
 });
-
-

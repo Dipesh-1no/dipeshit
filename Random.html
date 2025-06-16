@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Images Finder - Simple Yet Fun</title>
+ <link rel="stylesheet" href="Random.css">
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-81BDT5RKZX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-81BDT5RKZX');
+</script>
+</head>
+<body>
+    <a href="blog.html" class="redirect-button">Back🔙</a>
+
+  <div class="container">
+    
+    <div class="card">
+      <h1>📷 Random Images Finder – Simple Yet Fun!</h1>
+      <p>Looking for a small project to improve your web development skills? The <strong>Random Images Finder</strong> is the perfect choice! It’s lightweight, engaging, and built using only <strong>HTML, CSS, and JavaScript</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h2>💡 Project Idea</h2>
+      <p>The concept was simple: click a button and load a new image from the internet, every time. Instead of using a database or user input, we utilized the public image API from <a href="https://picsum.photos/" target="_blank">Picsum Photos</a> to generate completely random images.</p>
+    </div>
+
+    <div class="card">
+      <h2>🛠️ Tools Used</h2>
+      <ul>
+        <li>HTML for page structure</li>
+        <li>CSS for styling and responsiveness</li>
+        <li>JavaScript for interactivity and image fetching</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Key Learning</h2>
+      <ul>
+        <li>DOM manipulation using JavaScript</li>
+        <li>Fetching images using dynamic URLs</li>
+        <li>Making layouts responsive for all screen sizes</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🔧 Code Example</h2>
+      <p>Here's the simple JavaScript function that loads a new image each time the button is clicked:</p>
+      <pre><code>function loadImage() {
+  const image = document.getElementById("random-image");
+  image.src = `https://picsum.photos/400?random=${Math.floor(Math.random() * 1000)}`;
+}</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>📱 Responsive Design</h2>
+      <p>The entire layout was made mobile-first. The image scales automatically, and the cards stack vertically with proper padding on smaller devices. We used media queries to ensure great UX on phones and tablets.</p>
+    </div>
+
+    <div class="card">
+      <h2>✨ Improvements You Can Try</h2>
+      <ul>
+        <li>Add a loading spinner while image loads</li>
+        <li>Allow users to download the image</li>
+        <li>Show image author and resolution</li>
+        <li>Add filters like grayscale or blur</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Final Thoughts</h2>
+      <p>This project is ideal for beginners. It offers the right balance of fun and functionality. Whether you're learning to use the DOM, experiment with APIs, or practice styling, <strong>Random Images Finder</strong> is an awesome place to start.</p>
+      <blockquote>💡 Pro Tip: Host it using GitHub Pages or Netlify and share it with friends!</blockquote>
+    </div>
+
+  </div>
+
+</body>
+</html>

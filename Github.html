@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Built GitHub Profile Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Github.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-81BDT5RKZX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-81BDT5RKZX');
+</script>
+</head>
+<body>
+    <a href="blog.html" class="redirect-button">Back🔙</a>
+
+  <div class="container">
+    <h1>🚀 How We Built GitHub Profile Finder – Step-by-Step</h1>
+
+    <p>
+      The GitHub Profile Finder is a modern, responsive tool that helps you view public data about any GitHub user in seconds. Built using HTML, CSS, and JavaScript (or React for scalability), this app consumes GitHub’s public REST API and turns raw data into a clean, readable card.
+    </p>
+
+    <h2>🎯 Step 1: Define the Problem</h2>
+    <p>
+      We wanted to create a lightweight tool that could:
+    </p>
+    <ul>
+      <li>Search a GitHub user by username</li>
+      <li>Display profile picture, name, bio</li>
+      <li>Show followers, following, repo count</li>
+    </ul>
+
+    <h2>🖌️ Step 2: Design the UI</h2>
+    <p>
+      We used Figma for wireframing and kept the layout minimal for both desktop and mobile devices. The card shows data in a clear hierarchy.
+    </p>
+    <img src="image/github.png" alt="GitHub concept illustration">
+
+    <h2>🔌 Step 3: Connect GitHub API</h2>
+    <p>
+      We fetch data using:
+    </p>
+    <code>https://api.github.com/users/{username}</code>
+    <p>
+      It returns JSON data which we parse and render into the UI.
+    </p>
+
+    <h2>⚙️ Step 4: Handle Errors & UX</h2>
+    <ul>
+      <li>Empty input = warning</li>
+      <li>Invalid user = error message</li>
+      <li>Valid user = animated profile card</li>
+    </ul>
+
+    <h2>🚀 Step 5: Make It Live</h2>
+    <p>
+      We hosted it on <strong>Vercel</strong> for fast deployment. It works great on all screen sizes and delivers results in milliseconds!
+    </p>
+
+    <h2>🎉 Conclusion</h2>
+    <p>
+      GitHub Profile Finder is a perfect beginner-intermediate project to practice working with APIs, DOM manipulation, and responsive web design.
+    </p>
+  </div>
+</body>
+</html>
