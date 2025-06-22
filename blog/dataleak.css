@@ -1,0 +1,147 @@
+    :root {
+      --primary-color: #1e293b;
+      --accent-color: #4f46e5;
+      --bg-color: #f1f5f9;
+      --text-color: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 1rem;
+    }
+    .redirect-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4c6ef5, #15aabf);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(21, 170, 191, 0.4);
+  position: relative;
+  
+  overflow: hidden;
+}
+
+.redirect-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease-in-out;
+}
+
+.redirect-button:hover::before {
+  left: 130%;
+}
+
+.redirect-button:hover {
+  box-shadow: 0 6px 16px rgba(21, 170, 191, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .redirect-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      color: var(--accent-color);
+      font-size: 2rem;
+    }
+
+    .image {
+      width: 100%;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+
+    section h2 {
+      color: var(--accent-color);
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-left: 1rem;
+      padding-left: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .lang-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .lang-buttons button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
