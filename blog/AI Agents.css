@@ -1,0 +1,87 @@
+:root {
+      --primary-color: #0f172a;
+      --secondary-color: #1e293b;
+      --text-color: #f8fafc;
+      --accent-color: #38bdf8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+     .redirect-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4c6ef5, #15aabf);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(21, 170, 191, 0.4);
+  position: relative;
+  
+  overflow: hidden;
+}
+
+.redirect-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease-in-out;
+}
+
+.redirect-button:hover::before {
+  left: 130%;
+}
+
+.redirect-button:hover {
+  box-shadow: 0 6px 16px rgba(21, 170, 191, 0.6);
+  transform: translateY(-2px);
+}
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent-color);
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 16px;
+      margin: 1rem 0;
+    }
+
+    .card {
+      background-color: var(--secondary-color);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      margin: 2rem 0;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  
