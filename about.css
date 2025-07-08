@@ -271,3 +271,49 @@ footer {
     font-size: 0.85rem;
     color: #bbb;
 }
+.modal-section {
+  background-color: #ffffff;
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.modal-section:hover {
+  transform: translateY(-4px);
+}
+
+.modal-section h2 {
+  font-size: 30px;
+  color: #1e293b;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.modal-section p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-section {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .modal-section h2 {
+    font-size: 24px;
+  }
+
+  .modal-section p {
+    font-size: 16px;
+  }
+}
+

@@ -9,22 +9,19 @@
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9412630806274579"
-     crossorigin="anonymous"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-81BDT5RKZX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-81BDT5RKZX');
-</script>
- 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9412630806274579" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-81BDT5RKZX"></script>
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-81BDT5RKZX');
+  </script>
+  
 </head>
-
 <body>
- <nav id="navbar">
+  <nav id="navbar">
     <div class="logo">DipeshITsolution</div>
     <div class="hamburger" id="hamburger">&#9776;</div>
     <div class="menu" id="menu">
@@ -34,7 +31,6 @@
       <a href="service.html">Services</a>
       <a href="contact.html">Contact</a>
       <a href="term.html">Terms & Condition</a>
-
     </div>
   </nav>
 
@@ -42,11 +38,9 @@
     <section id="gallery" data-aos="zoom-in">
       <h2>Gallery</h2>
       <div class="gallery">
-          <img src="image/chat web.png" alt="Gallery Image 1" />
-          <img src="image/chat code.png" alt="Gallery Image 2" />
+        <img src="image/chat web.png" alt="Gallery Image 1" />
+        <img src="image/chat code.png" alt="Gallery Image 2" />
         <img src="image/web.webp" alt="Gallery Image 3" />
-        
-        
       </div>
     </section>
 
@@ -58,7 +52,6 @@
       <button class="services-button" onclick="openModal('servicesModal')">Explore Our Services</button>
     </section>
 
-    <!-- Modal -->
     <div id="servicesModal" class="modal">
       <div class="modal-content" data-aos="fade-up">
         <span class="close" onclick="closeModal('servicesModal')">&times;</span>
@@ -71,6 +64,39 @@
         <img src="image/chat code.png" class="project-img" alt="Our Services"/>
       </div>
     </div>
+
+    <section class="modal-section" data-aos="fade-up">
+    <h2>About Our IT Agency</h2>
+    <p>
+      DipeshITsolution is a leading IT agency delivering transformative digital solutions. 
+      We specialize in crafting intelligent, customer-centric applications and platforms that elevate businesses. 
+      From startups to enterprises, we align technology with your vision to drive real business impact. 
+      Our mission is to empower clients through expert services in full-stack development, cloud integration, 
+      and advanced UI/UX design.
+    </p>
+  </section>
+
+  <section class="modal-section" data-aos="fade-up">
+    <h2>Our Extended Services</h2>
+    <ul>
+      <li><strong>Mobile App Development:</strong> Android & iOS apps built with performance and scalability in mind.</li>
+      <li><strong>SEO & Digital Marketing:</strong> Improve your visibility and reach online with our data-driven marketing strategies.</li>
+      <li><strong>Custom Software Development:</strong> Tailored software to meet your specific business needs.</li>
+      <li><strong>Cloud Services:</strong> AWS, Azure, and Google Cloud deployments for fast, reliable, and secure hosting solutions.</li>
+      <li><strong>Maintenance & Support:</strong> Reliable post-launch maintenance and updates to keep your services up and running.</li>
+    </ul>
+  </section>
+
+  <section class="modal-section" data-aos="fade-up">
+    <h2>Why Businesses Trust Us</h2>
+    <ul>
+      <li><strong>Experienced Team:</strong> Skilled developers and creative designers with real-world project delivery.</li>
+      <li><strong>Agile Methodology:</strong> We believe in flexibility, transparency, and continuous delivery.</li>
+      <li><strong>Client-Centric Approach:</strong> You are at the center of everything we do.</li>
+      <li><strong>24/7 Support:</strong> Round-the-clock assistance to ensure business continuity.</li>
+    </ul>
+  </section>
+
   </main>
 
   <footer class="footer" data-aos="fade-up">
@@ -96,51 +122,27 @@
     </div>
   </footer>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
- <script>
-  AOS.init();
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
 
-  function openModal(id) {
-    document.getElementById(id).style.display = "block";
-  }
-
-  function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    const modals = document.querySelectorAll(".modal");
-    modals.forEach(modal => {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-  }
-
-  // Hamburger toggle function
-  function toggleMenu() {
-    const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle("active");
-  }
-
-  // Optional: Navbar hide on scroll
-  let lastScrollTop = 0;
-  const navbar = document.querySelector(".navbar");
-
-  window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-      // Scroll down
-      navbar.classList.add("navbar-hidden");
-    } else {
-      // Scroll up
-      navbar.classList.remove("navbar-hidden");
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative
-  });
-</script>
-<script src="index.js"></script>
-    </body>
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll(".modal");
+      modals.forEach(modal => {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  </script>
+  <script src="index.js"></script>
+</body>
 </html>
