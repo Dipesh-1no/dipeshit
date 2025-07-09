@@ -94,19 +94,22 @@ p {
   margin-bottom: 10px;
   color: #2e7d32;
 }
-.feature-img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 12px;
-  margin: 15px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
+  .feature-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.feature-img:hover {
-  transform: scale(1.02);
-}
+  .feature-img:hover {
+    transform: scale(1.02);
+  }
 
 
 /* Importance Section */
