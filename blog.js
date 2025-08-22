@@ -55,3 +55,27 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll("#category-filters button");
+  const articles = document.querySelectorAll("main article");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const category = button.getAttribute("data-category");
+
+      articles.forEach(article => {
+        const articleCategory = article.getAttribute("data-category");
+
+        if (category === "all" || articleCategory === category) {
+          article.style.display = "block";
+        } else {
+          article.style.display = "none";
+        }
+      });
+    });
+  });
+});
