@@ -13,6 +13,51 @@
       text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+    .redirect-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #686e86, #15aabf);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(109, 217, 231, 0.4);
+  position: relative;
+  
+  overflow: hidden;
+}
+
+.redirect-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease-in-out;
+}
+
+.redirect-button:hover::before {
+  left: 130%;
+}
+
+.redirect-button:hover {
+  box-shadow: 0 6px 16px rgba(21, 170, 191, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .redirect-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
     .container {
       max-width: 900px;
       margin: auto;

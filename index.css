@@ -9,6 +9,27 @@
     from { transform: translateY(30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+/*  DIPESHIT SOLOUTION */
+#typing {
+      font-size: 2.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .char {
+      transition: color 0.3s ease;
+    }
+
+    .cursor {
+      display: inline-block;
+      animation: blink 0.7s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
 
   
 /* ===== Gallery Images (Interactive Zoom) ===== */
