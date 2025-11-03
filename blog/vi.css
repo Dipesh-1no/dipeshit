@@ -1,0 +1,353 @@
+/* ===== Base Styles ===== */
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* ===== Blog Section ===== */
+    .blog-article {
+      padding: 2rem 1rem;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+    }
+
+    .blog-title {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .blog-subtitle {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ===== Content Formatting ===== */
+    .blog-content p,
+    .blog-content li {
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .blog-content h3 {
+      background: #f1f5f9;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-content ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    /* ===== BLOG IMAGE STYLING ===== */
+img {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.img-caption {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+/* ===== Responsive tweak for smaller devices ===== */
+@media (max-width: 600px) {
+  img {
+    margin: 1.5rem auto;
+  }
+  img-caption {
+    font-size: 0.8rem;
+  }
+}
+/* Back button */
+.redirect-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4c6ef5, #15aabf);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(21, 170, 191, 0.4);
+  position: relative;
+  
+  overflow: hidden;
+}
+
+.redirect-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease-in-out;
+}
+
+.redirect-button:hover::before {
+  left: 130%;
+}
+
+.redirect-button:hover {
+  box-shadow: 0 6px 16px rgba(21, 170, 191, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .redirect-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    }}
+
+
+    /* ===== Buttons / CTA ===== */
+    .blog-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      flex: 1;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: #0f172a;
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e293b;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f8fafc;
+    }
+
+    /* ===== Scroll Animation ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .blog-container {
+        padding: 1.2rem;
+      }
+
+      .blog-title {
+        font-size: 1.4rem;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        flex: 100%;
+      }
+    }
+/* ===== FOOTER SECTION ===== */
+.footer {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 3rem 1.5rem 1rem;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* Main container */
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ===== Logo & About Section ===== */
+.footer-logo {
+  flex: 1 1 250px;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #38bdf8;
+}
+
+.footer-logo p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* ===== Contact Section ===== */
+.footer-contact {
+  flex: 1 1 220px;
+}
+
+.footer-contact h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #f1f5f9;
+}
+
+.footer-contact p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Social Links Section ===== */
+.footer-social {
+  flex: 1 1 220px;
+}
+
+.footer-social h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #f1f5f9;
+}
+
+.footer-social a {
+  display: inline-block;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color: #f8fafc;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #38bdf8;
+}
+
+/* Terms link inside social */
+.footer-social .term {
+  margin-top: 1rem;
+}
+
+.footer-social .term a {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer-social .term a:hover {
+  color: #38bdf8;
+}
+
+/* ===== Bottom Bar ===== */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo,
+  .footer-contact,
+  .footer-social {
+    flex: 100%;
+  }
+
+  .footer-social a {
+    font-size: 1.5rem;
+    margin-right: 1.2rem;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}
