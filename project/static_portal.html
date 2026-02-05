@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>University Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">TCBS</div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="static_portal.html">Home</a></li>
+<li class="has-dropdown">
+  <span class="dropdown-toggle">About</span>
+  <ul class="dropdown">
+    <li>About Web Page</li>
+    <li>About Course</li>
+    <li>About Syllabus</li>
+  </ul>
+</li>
+
+<li class="has-dropdown">
+  <span class="dropdown-toggle">Course</span>
+  <ul class="dropdown">
+    <li>BBA</li>
+    <li>BCA</li>
+  </ul>
+</li>
+
+    <li><a href="admin.html">Admin</a></li>
+    <li><a href="attendance.html">Attendance</a></li>
+    <li><a href="marks.html">Marks</a></li>
+    <li><a href="ranking.html">Ranking</a></li>
+  </ul>
+</nav>
+
+
+<section class="main reveal">
+  <div class="text">
+    <h1>Welcome Students</h1>
+    <p>All notifications, syllabus, attendance & results in one place.</p>
+    <button>View Notifications</button>
+  </div>
+  <div class="video">
+    <video autoplay loop muted>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="notifications reveal">
+  <h2>Latest Notifications</h2>
+  <ul id="notifList"></ul>
+</section>
+
+<section class="chatbot reveal"">
+  <h2>Student Chatbot</h2>
+  <div id="chatbox"></div>
+  <input id="userInput" placeholder="Ask your query...">
+  <button onclick="sendMsg()">Send</button>
+</section>
+
+<div id="hodPopup" class="popup">
+  <div class="popup-content">
+    <h3>Contact HOD</h3>
+    <p>Email: hod@university.edu</p>
+    <p>Phone: +91-XXXXXXXXX</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

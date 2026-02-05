@@ -1,0 +1,331 @@
+/* =====================================================
+   GLOBAL RESET & BASE
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f6fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   GLASSMORPHISM NAVBAR
+===================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  padding: 15px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Logo */
+.logo {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.nav-links a,
+.dropdown-toggle {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+
+/* =====================================================
+   DROPDOWN (BASE – NO SPACE TAKING)
+===================================================== */
+.has-dropdown {
+  position: relative;
+}
+
+/* Dropdown hidden */
+.has-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #ffffff;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+  list-style: none;
+  padding: 8px 0;
+  margin-top: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.25s ease;
+  z-index: 200;
+}
+
+/* Dropdown items */
+.has-dropdown .dropdown li {
+  padding: 10px 14px;
+  white-space: nowrap;
+  color: #222;
+}
+
+.has-dropdown .dropdown li:hover {
+  background: #f1f3f9;
+}
+
+/* ===============================
+   DESKTOP DROPDOWN (HOVER)
+================================ */
+@media (min-width: 769px) {
+  .has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   HAMBURGER MENU
+===================================================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+/* =====================================================
+   MAIN HERO SECTION
+===================================================== */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 40px;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 42px;
+  color: #1e3a8a;
+}
+
+.main p {
+  margin: 15px 0;
+  color: #555;
+}
+
+.main button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #1e3a8a;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.main video {
+  width: 100%;
+  border-radius: 18px;
+}
+
+/* =====================================================
+   CONTENT SECTIONS
+===================================================== */
+.notifications,
+.chatbot {
+  padding: 50px 40px;
+}
+
+.notifications h2,
+.chatbot h2 {
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+.notifications ul,
+#chatbox {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+#chatbox {
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.chatbot input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.chatbot button {
+  padding: 10px 20px;
+  background: #1e3a8a;
+  border: none;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+/* =====================================================
+   POPUP
+===================================================== */
+.popup {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+}
+
+.popup-content {
+  background: #ffffff;
+  padding: 25px;
+  width: 320px;
+  text-align: center;
+  border-radius: 14px;
+  animation: popScale 0.4s ease;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 8px 18px;
+  border: none;
+  background: #1e3a8a;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@keyframes popScale {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE NAVBAR
+===================================================== */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    gap: 0;
+
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+  }
+
+  .nav-links li {
+    padding: 12px 20px;
+  }
+
+  /* Mobile dropdown overlay (no space) */
+  .has-dropdown .dropdown {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: calc(100% + 8px);
+  }
+
+  .has-dropdown.active .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .notifications,
+  .chatbot {
+    padding: 30px 20px;
+  }
+}
