@@ -109,3 +109,18 @@ animate();
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 });
+const video = document.getElementById('splash-video');
+const splashScreen = document.getElementById('splash-screen');
+const mainContent = document.getElementById('main-content');
+
+// Jab video khatam ho jaye
+video.onended = function() {
+    // 1. Splash screen ko hide kar do
+    splashScreen.style.display = 'none';
+    
+    // 2. Main content ko show kar do
+    mainContent.style.display = 'block';
+    
+    // 3. Scroll wapas allow kar do
+    document.body.style.overflow = 'auto';
+};
