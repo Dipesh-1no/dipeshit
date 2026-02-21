@@ -183,6 +183,44 @@ section{
 .image-grid img:hover{
   transform:scale(1.05);
 }
+/* Same style for image and video */
+/* ================= PRAKRITIK SAUNDARYA SIZE FIX ================= */
+
+.image-grid img,
+.feature-img video{
+  width:100%;
+  max-width:800px;      /* Laptop me zyada wide nahi hoga */
+  height:600px;         /* Thodi kam height */
+  object-fit:cover;
+  border-radius:15px;
+  display:block;
+  margin:20px auto;     /* Center align */
+}
+
+/* Mobile ke liye */
+@media(max-width:768px){
+  .image-grid img,
+  .feature-img video{
+    max-width:100%;
+    height:250px;
+  }
+}
+.feature-img img:hover,
+.feature-img video:hover {
+  transform:scale(1.05);
+}
+.feature-row.reverse .feature-img img{
+  height:700px;   /* Laptop me height badi */
+  object-fit:cover;
+  border-radius:18px; 
+}
+@media(max-width:768px){
+  .feature-row.reverse .feature-img img{
+    height:220px;   /* Mobile same jaisa pehle tha */
+  }
+}
+
+
 
 /* ================= Footer ================= */
 
@@ -262,6 +300,16 @@ section{
   font-size:0.9rem;
   color:#aaa;
 }
+.footer-links{
+  margin-top:15px;
+}
+.footer-links a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}
+
 
 /* ================= MOBILE ================= */
 

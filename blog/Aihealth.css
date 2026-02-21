@@ -189,3 +189,12 @@ footer {
     font-size: 0.85em;
   }
 }
+.footer-links{
+  margin-top:15px;
+}
+.footer-links a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}

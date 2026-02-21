@@ -247,6 +247,16 @@
   font-size: 0.9rem;
   opacity: 0.9;
 }
+.footer-links{
+  margin-top:15px;
+}
+.footer-links a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 900px) {

@@ -74,6 +74,15 @@
     .footer-social a{margin-right:10px;font-size:1.25rem;color:var(--text);opacity:.9}
     .footer-social a:hover{opacity:1;color:var(--brand)}
     .footer-bottom{border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:12px 0;color:#a7b1c5}
+.footer-links{
+  margin-top:15px;
+}
+.footer-links a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}
 
     /* Responsive */
     @media (max-width: 960px){

@@ -341,6 +341,16 @@
       margin-top:18px;
       text-align:center;
     }
+    .footer-links{
+  margin-top:15px;
+}
+.footer-links a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}
+
 
     /* small helpers */
     .muted{ color:var(--muted); font-size:13px; }

@@ -532,6 +532,16 @@
   color: var(--muted);
   font-size: 13px;
 }
+.footer-links{
+  margin-top:15px;
+}
+.footer-links a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}
+
 
 /* ✅ Responsive Footer */
 @media (max-width: 900px){

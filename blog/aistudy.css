@@ -13,6 +13,16 @@
       text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+.footer-links{
+  margin-top:15px;
+}
+.footer-links a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}
+
     .redirect-button {
   display: inline-block;
   padding: 12px 24px;
@@ -125,3 +135,5 @@
       }
     }
     
+    
+

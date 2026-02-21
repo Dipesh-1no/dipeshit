@@ -222,6 +222,16 @@
       border-top: 1px solid rgba(255,255,255,0.05);
       padding-top: 15px;
     }
+    .footer-links{
+  margin-top:15px;
+}
+.footer-links a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}
+
 
     /* Responsive */
     @media (max-width: 768px) {
