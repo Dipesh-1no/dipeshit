@@ -81,6 +81,63 @@ article a{
   margin-bottom: 0.75rem;
   display: block;
 }
+/* ===== NEWS CARD STYLE ===== */
+
+.news-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.news-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: #222;
+}
+
+/* Left small image */
+.news-img img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Right text */
+.news-content h3 {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.news-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .news-flex {
+    flex-direction: row; /* image upar nahi jayegi */
+  }
+
+  .news-img img {
+    width: 90px;
+    height: 90px;
+  }
+}
 
 /* Footer */
 .footer {
