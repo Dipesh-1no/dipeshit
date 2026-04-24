@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | DipeshITsolution</title>
+  <meta name="description" content="Get in touch with DipeshITsolution for web development, cybersecurity, SEO, and IT consulting services. We'd love to hear from you!" />
+  <meta name="keywords" content="contact DipeshITsolution, IT services contact, web development inquiry, hire developer India" />
+  <link rel="icon" type="image/png" href="image/dipeshicon.webp" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-81BDT5RKZX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-81BDT5RKZX');
+  </script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- Animated Background Particles -->
+  <div class="bg-particles">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">DipeshITsolution</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="service.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <h1>Get In Touch</h1>
+    <p>Have a project in mind or need IT solutions? We'd love to hear from you. Fill out the form below and we'll get back to you within 24 hours.</p>
+  </section>
+
+  <!-- Contact Container -->
+  <div class="contact-container">
+
+    <!-- Left: Contact Info -->
+    <div class="contact-info">
+      <div class="info-card">
+        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Our Location</h3>
+        <p>Rajasthan, India</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+        <h3>Call Us</h3>
+        <p><a href="tel:+918306073071">+91 8306073071</a></p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email Us</h3>
+        <p><a href="mailto:dipeshitsolution1@gmail.com">dipeshitsolution1@gmail.com</a></p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon"><i class="fas fa-clock"></i></div>
+        <h3>Working Hours</h3>
+        <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: Closed</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon"><i class="fas fa-share-alt"></i></div>
+        <h3>Follow Us</h3>
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/dipesh-yadav-321a62329/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Dipesh-1no" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/dipeshitsolution/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/918306073071" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="contact-form-wrapper">
+      <form class="contact-form" id="contactForm">
+        <h2>Send Us a Message</h2>
+        <p class="form-subtitle">Fill in the details and we'll respond shortly</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="user_name">Full Name *</label>
+            <input type="text" id="user_name" name="user_name" placeholder="Your Full Name" required />
+          </div>
+          <div class="form-group">
+            <label for="user_email">Email Address *</label>
+            <input type="email" id="user_email" name="user_email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="user_phone">Phone Number</label>
+            <input type="tel" id="user_phone" name="user_phone" placeholder="+91 XXXXXXXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="service_type">Service Interested In</label>
+            <select id="service_type" name="service_type">
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="SEO & Digital Marketing">SEO & Digital Marketing</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Social Media Management">Social Media Management</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this about?" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Tell us about your project or question..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="btn-text">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </span>
+          <span class="spinner" id="spinner"></span>
+        </button>
+
+        <div id="statusMsg"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>How quickly do you respond to inquiries?</span>
+        <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+      </div>
+      <div class="faq-answer">
+        <p>We typically respond within 24 hours on business days. For urgent matters, feel free to call us directly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>What services do you offer?</span>
+        <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+      </div>
+      <div class="faq-answer">
+        <p>We offer full-stack web development, cybersecurity consulting, SEO optimization, graphic design, video editing, and social media management.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Do you work with international clients?</span>
+        <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes! We work with clients globally. All communication can be done online through calls, emails, and video meetings.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>What is the typical project timeline?</span>
+        <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+      </div>
+      <div class="faq-answer">
+        <p>It depends on the project scope. A basic website takes 1-2 weeks, while complex web applications may take 4-8 weeks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>DipeshITsolution</h2>
+        <p>Delivering smart and secure IT solutions for modern businesses.</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>📞 +91 8306073071</p>
+        <p>📧 <a href="mailto:dipeshitsolution1@gmail.com">dipeshitsolution1@gmail.com</a></p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://www.linkedin.com/in/dipesh-yadav-321a62329/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Dipesh-1no" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/dipeshitsolution/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 DipeshITsolution. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>
