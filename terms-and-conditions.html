@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Terms & Conditions | DipeshITsolution</title>
+  <meta name="description" content="Read the terms and conditions for using DipeshITsolution's website and IT services.">
+  
+  <link rel="icon" type="image/png" href="image/dipeshicon.webp">
+  <link rel="stylesheet" href="navbar.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========== BASE STYLES ========== */
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --accent: #06b6d4;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --gradient-header: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* ========== HEADER SECTION ========== */
+    .legal-header {
+      background: var(--gradient-header);
+      padding: 120px 20px 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .legal-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0 0 15px;
+      letter-spacing: -1px;
+    }
+
+    .legal-header p {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .last-updated {
+      display: inline-block;
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* ========== CONTENT LAYOUT ========== */
+    .legal-container {
+      max-width: 1000px;
+      margin: -30px auto 80px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .legal-card {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px;
+      border: 1px solid var(--border-color);
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* ========== ACCORDION (Easy to Read) ========== */
+    .accordion-item {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-item:hover {
+      border-color: var(--primary);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.1);
+    }
+
+    .accordion-header {
+      background: #f8fafc;
+      padding: 20px 25px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text-main);
+      transition: background 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background: #f1f5f9;
+    }
+
+    .accordion-header.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .accordion-header.active i {
+      transform: rotate(180deg);
+    }
+
+    .accordion-header i {
+      color: var(--accent);
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active i {
+      color: white;
+    }
+
+    .accordion-content {
+      padding: 0 25px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      background: white;
+    }
+
+    .accordion-content.show {
+      padding: 25px;
+      max-height: 1000px; /* arbitrary large number */
+    }
+
+    .accordion-content p {
+      margin: 0 0 15px;
+      color: var(--text-muted);
+    }
+
+    .accordion-content ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text-muted);
+    }
+
+    .accordion-content li {
+      margin-bottom: 8px;
+    }
+
+    /* ========== CONTACT BOX ========== */
+    .legal-contact {
+      margin-top: 50px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(6, 182, 212, 0.05));
+      border: 1px dashed var(--primary);
+      padding: 30px;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .legal-contact h3 {
+      margin: 0 0 10px;
+      color: var(--primary-dark);
+    }
+
+    .legal-contact p {
+      color: var(--text-muted);
+      margin: 0 0 20px;
+    }
+
+    .btn-contact {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+      color: white;
+    }
+
+    /* ========== FOOTER STYLES (MATCHING SERVICE.HTML) ========== */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #020617;
+      color: white;
+      margin-top: 0;
+    }
+    .footer {
+      background-color: #020617;
+      color: #ffffff;
+      padding: 40px 20px 20px;
+      margin-top: 0;
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(99, 102, 241, 0.15);
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: auto;
+      gap: 30px;
+      text-align: left;
+    }
+    .footer-logo h2 {
+      color: #06b6d4;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .footer-contact h3, .footer-social h3 {
+      margin-bottom: 10px;
+      color: #06b6d4;
+    }
+    .footer-social a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-right: 10px;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+    .footer-social a:hover {
+      color: #818cf8;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .footer-links a {
+      color: #22d3ee;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .legal-header h1 { font-size: 2.2rem; }
+      .legal-card { padding: 25px; }
+      .footer-container { flex-direction: column; text-align: center; }
+      .footer-seo-links ul { list-style: none; padding: 0; display: inline-block; text-align: left; }
+    }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-81BDT5RKZX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-81BDT5RKZX');
+</script>
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="logo">DipeshITsolution</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+      <a href="contact.html" class="btn-contact-nav" style="background: linear-gradient(135deg, #0f172a, #1e3a8a); color: #fff; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-weight: 600;">Get in Touch</a>
+    </div>
+  </nav>
+
+  <!-- ========== HEADER ========== -->
+  <header class="legal-header">
+    <h1>Terms &amp; Conditions</h1>
+    <p>Please read these terms carefully before using our IT services and website.</p>
+    <div class="last-updated"><i class="fas fa-clock"></i> Last Updated: May 2026</div>
+  </header>
+
+  <!-- ========== CONTENT ========== -->
+  <main class="legal-container">
+    <div class="legal-card">
+      <p class="intro-text">
+        Welcome to DipeshITsolution! By accessing our website or engaging with our services, you agree to be bound by the following terms. We have kept them simple and easy to understand.
+      </p>
+
+      <!-- Accordion 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header active">
+          1. General Agreement <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="accordion-content show">
+          <p>By hiring <strong>DipeshITsolution</strong> for any IT service (Website Development, SEO, Graphic Design, etc.), you agree to the terms listed on this page. These terms form a legally binding agreement between you (the Client) and us (the Agency).</p>
+          <p>We reserve the right to update these terms at any time. Significant changes will be communicated to active clients.</p>
+        </div>
+      </div>
+
+      <!-- Accordion 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          2. Scope of Work &amp; Revisions <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="accordion-content">
+          <p>The specific services to be provided will be outlined in our project proposal or invoice. Any requests outside the agreed scope will incur additional charges.</p>
+          <ul>
+            <li><strong>Web Design:</strong> We offer a specific number of revision rounds during the design phase. Once the design is approved and development begins, major design changes will be billed extra.</li>
+            <li><strong>Graphic & Video:</strong> We provide unlimited revisions <em>within reason</em> during the initial draft phase.</li>
+            <li><strong>SEO:</strong> SEO is an ongoing process. We do not guarantee #1 rankings on Google overnight, but we guarantee the implementation of industry best practices to improve your visibility.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Accordion 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          3. Payment Terms <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="accordion-content">
+          <p>We require upfront commitments to allocate resources for your project effectively:</p>
+          <ul>
+            <li>A <strong>50% non-refundable advance payment</strong> is required to start any project.</li>
+            <li>The remaining 50% is due upon project completion, <em>before</em> the final files are handed over or the website goes live on your domain.</li>
+            <li>For monthly services (like SEO or Social Media Management), payments must be made at the beginning of the billing cycle.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Accordion 4 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          4. Intellectual Property &amp; Copyright <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Website Content:</strong> All text, images, and branding assets provided by the client must be legally owned by the client. We are not liable for copyright infringement caused by client-provided materials.</p>
+          <p><strong>Final Code & Designs:</strong> Upon full and final payment, the copyright of the final website, logos, and designs is transferred to you. However, DipeshITsolution reserves the right to display the completed work in our portfolio and marketing materials.</p>
+        </div>
+      </div>
+
+      <!-- Accordion 5 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          5. Website Maintenance &amp; Support <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="accordion-content">
+          <p>We provide free bug-fixing and minor support for <strong>30 days</strong> after a website is launched. This covers technical errors on our part.</p>
+          <p>It does <em>not</em> cover issues caused by the client editing the code, server/hosting downtime, or adding new features. For ongoing support, we offer affordable Monthly Maintenance packages.</p>
+        </div>
+      </div>
+
+      <!-- Accordion 6 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          6. Refund &amp; Cancellation Policy <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Because of the time and resources involved in IT services, our refund policy is strict:</p>
+          <ul>
+            <li>The 50% advance payment is non-refundable once work has commenced.</li>
+            <li>If a project is cancelled by the client midway, the client will be billed for the work completed up to that point.</li>
+            <li>If DipeshITsolution fails to deliver the promised services due to unforeseen circumstances on our end, a proportional refund will be issued.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Box -->
+      <div class="legal-contact">
+        <h3>Have questions about our terms?</h3>
+        <p>If you have any doubts regarding our terms of service, feel free to reach out to our team.</p>
+        <a href="contact.html" class="btn-contact">Contact Support</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>DipeshITsolution</h2>
+        <p>Delivering smart and secure IT solutions for modern businesses in Behror, Rajasthan &amp; across India.</p>
+      </div>
+      
+      <div class="footer-seo-links" style="max-width: 250px;">
+        <h3 style="color: #06b6d4; margin-bottom: 10px;">Our Services</h3>
+        <ul style="list-style: none; padding: 0; line-height: 1.8;">
+          <li><a href="service.html#service-fullstack" style="font-size: 0.9rem; color: #fff; text-decoration: none;">Website Design in Behror</a></li>
+          <li><a href="service.html#service-seo" style="font-size: 0.9rem; color: #fff; text-decoration: none;">SEO Expert in Neemrana</a></li>
+          <li><a href="service.html#service-graphic" style="font-size: 0.9rem; color: #fff; text-decoration: none;">Graphic Design Kotputli</a></li>
+          <li><a href="blog.html" style="font-size: 0.9rem; color: #fff; text-decoration: none;">Best IT Company Rajasthan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p style="color: white; font-size: 0.9rem;">ðŸ“ž +91 8306073071</p>
+        <p style="font-size: 0.9rem;">ðŸ“§ <a href="mailto:dipeshitsolution1@gmail.com" style="color: #fff; text-decoration: none;">dipeshitsolution1@gmail.com</a></p>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://www.linkedin.com/in/dipesh-yadav-321a62329/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Dipesh-1no" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/dipeshitsolution/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-links" style="margin-bottom: 10px;">
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+      </div>
+      <p>&copy; 2026 DipeshITsolution â€” Web Design & SEO Agency in Behror. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    // Navbar Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+      });
+    }
+
+    // Accordion Logic
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        // Toggle current
+        header.classList.toggle('active');
+        const content = header.nextElementSibling;
+        content.classList.toggle('show');
+      });
+    });
+  </script>
+
+</body>
+</html>
