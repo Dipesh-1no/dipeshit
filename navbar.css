@@ -96,4 +96,58 @@ nav.hidden {
   .hamburger {
     display: block;
   }
+
+  .nav-buttons {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 15px;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-blog, .btn-contact {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Custom Navbar Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.menu a.btn-blog {
+  background: transparent;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.menu a.btn-blog:hover {
+  background: #007BFF;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.menu a.btn-contact {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
+  transition: all 0.3s ease;
+}
+
+.menu a.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(15, 23, 42, 0.4);
+  color: #fff;
 }
